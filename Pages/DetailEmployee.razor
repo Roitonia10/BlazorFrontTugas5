@@ -1,0 +1,30 @@
+@page "/employeedetail/{id}"
+
+@if(Employee == null || Employee.Department==null){
+  <div class="spinner"></div>
+}
+else{
+<h1><b>Detail Employee</b></h1><br/>
+       <tr><b>created by : Roitonia Panjaitan_72190358</b></tr>
+<div class="card-deck"> 
+  <div class="card border-secondary mb-6"  style="min-width: 18rem; max-width:40%">  
+    <div class="card-body">
+      <h3 class="card-title"><b>DATA EMPLOYEE</b></h3>
+      <p class="card-text">1. Employee Id : @Employee.EmployeeId</p>
+       <p class="card-text">2. First Name : @Employee.FirstName</p>
+       <p class="card-text">3. Last Name : @Employee.LastName</p>
+       <p class="card-text">4. Email : @Employee.Email</p>
+       <p class="card-text">5. DateOfBirth: @Employee.DateOfBirth</p>
+       <p class="card-text">6. Gender : @Employee.Gender</p>
+        <p class="card-text">7. DepartmentId : @Employee.DepartmentId</p>
+        <p class="card-text">8. Department Name: @Employee.Department.DepartmentName</p> 
+        <p>9.PhotoPath :</p>
+        <tr><img class="card-img-top" style="width: 25rem" src="@Employee.PhotoPath" alt="Card image cap"></tr>
+    </div>
+    </div>
+    </div><br/>
+     <div><a href="employeepage"><button  type="button" class="btn btn-dark btn-lg">Back</button></a></div>
+}
+     
+      
+       

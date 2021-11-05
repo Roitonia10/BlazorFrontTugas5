@@ -1,0 +1,23 @@
+@page "/departmentpage"
+
+<h2> Daftar Department</h2>
+<div><button type="button" class="btn btn-info oi oi-plus" aria-hidden="true">CREATE NEW Department</button> </div>
+<div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var dept in Departments){
+            <tr>
+                <td>@dept.DepartmentId</td>
+                <td>@dept.DepartmentName</td>
+                <td><a href="@($"Departmentdetail/{dept.DepartmentId}")"class="btn btn-primary">detail</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
